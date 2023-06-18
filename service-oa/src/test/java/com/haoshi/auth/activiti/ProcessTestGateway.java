@@ -47,8 +47,7 @@ public class ProcessTestGateway {
     public void startProcessInstance() {
         Map<String,Object> map = new HashMap<>();
         //设置请假天数
-        map.put("day","3");
-
+        //map.put("day","3");
         ProcessInstance processInstance =
                 runtimeService.startProcessInstanceByKey("qingjia003");
         System.out.println(processInstance.getProcessDefinitionId());
