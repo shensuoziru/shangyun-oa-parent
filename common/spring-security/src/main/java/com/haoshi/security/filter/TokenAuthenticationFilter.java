@@ -57,8 +57,8 @@ public class TokenAuthenticationFilter extends OncePerRequestFilter {
             String username = JwtHelper.getUsername(token);
             if(!StringUtils.isEmpty(username)) {
 //                //当前用户信息放到ThreadLocal里面
-//                LoginUserInfoHelper.setUserId(JwtHelper.getUserId(token));
-//                LoginUserInfoHelper.setUsername(username);
+                LoginUserInfoHelper.setUserId(JwtHelper.getUserId(token));
+                LoginUserInfoHelper.setUsername(username);
 
                 //通过username从redis获取权限数据
                 String authString = (String)redisTemplate.opsForValue().get(username);
