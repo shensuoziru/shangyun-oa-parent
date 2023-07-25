@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-@MapperScan(basePackages = {"com.haoshi.auth.dao","com.haoshi.process.dao"})
+@MapperScan(basePackages = {"com.haoshi.auth.dao","com.haoshi.process.dao","com.haoshi.wechat.dao"})
 public class MybatisPlusConfig {
 
     /**
